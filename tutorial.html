@@ -10,6 +10,8 @@
   <!-- Your HTML -->
   <!-- ========= -->
 
+  <div id="container">Lost Text...</div>
+
   <!-- ========= -->
   <!-- Libraries -->
   <!-- ========= -->
@@ -23,6 +25,21 @@
   <!-- =============== -->
   <script type="text/javascript">
     // your JS code goes here
+
+    var AppView = Backbone.View.extend({
+      el : '#container',
+
+      initialize: function(){
+        this.render();
+      },
+
+      render : function(){
+        this.$el.html("Hello World");
+      }
+
+    });
+
+    var appView = new AppView();
   </script>
   
 </body>
