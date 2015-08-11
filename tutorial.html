@@ -29,12 +29,16 @@
     var AppView = Backbone.View.extend({
       el : '#container',
 
+      my_template : _.template("<h3><%= who %></h3>"),
+
       initialize: function(){
         this.render();
       },
 
       render : function(){
-        this.$el.html("Hello World");
+        this.$el.html(
+            this.my_template({who : 'Manan'})
+          );
       }
 
     });
