@@ -10,7 +10,15 @@
   <!-- Your HTML -->
   <!-- ========= -->
 
-  <div id="container">Lost Text...</div>
+   <section id="todoapp">
+    <header id="header">
+      <h1>Todos</h1>
+      <input id="new-todo" placeholder="What needs to be done?">
+    </header>
+    <section id="main">
+      <ul id="todo-list"></ul>
+    </section>
+  </section>div id="container">Lost Text...</div>
 
   <!-- ========= -->
   <!-- Libraries -->
@@ -26,24 +34,6 @@
   <script type="text/javascript">
     // your JS code goes here
 
-    var AppView = Backbone.View.extend({
-      el : '#container',
-
-      my_template : _.template("<h3><%= who %></h3>"),
-
-      initialize: function(){
-        this.render();
-      },
-
-      render : function(){
-        this.$el.html(
-            this.my_template({who : 'Manan'})
-          );
-      }
-
-    });
-
-    var appView = new AppView();
   </script>
   
 </body>
